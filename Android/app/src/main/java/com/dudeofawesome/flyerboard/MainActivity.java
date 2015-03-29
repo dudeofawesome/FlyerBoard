@@ -8,6 +8,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.support.v7.widget.Toolbar;
+import android.widget.ViewFlipper;
+import android.widget.ViewSwitcher;
 
 import com.mikepenz.iconics.IconicsDrawable;
 import com.mikepenz.materialdrawer.Drawer;
@@ -18,9 +20,13 @@ import com.mikepenz.materialdrawer.model.ProfileDrawerItem;
 import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IProfile;
+import com.mikepenz.materialdrawer.model.interfaces.Nameable;
 
 
 public class MainActivity extends ActionBarActivity {
+    public static Toolbar toolbar;
+
+    private ViewFlipper viewFlipper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,8 +34,9 @@ public class MainActivity extends ActionBarActivity {
 
         setContentView(R.layout.activity_main);
 
+        viewFlipper = (ViewFlipper) findViewById(R.id.viewFlipper);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.activity_main_toolbar);
+        toolbar = (Toolbar) findViewById(R.id.activity_main_toolbar);
         setSupportActionBar(toolbar);
 
         // Create the AccountHeader
@@ -54,40 +61,38 @@ public class MainActivity extends ActionBarActivity {
                 .withAccountHeader(headerResult)
                 .addDrawerItems(
                      new PrimaryDrawerItem().withName(R.string.drawer_item_home),
+                     new PrimaryDrawerItem().withName(R.string.drawer_item_post),
+                     new PrimaryDrawerItem().withName(R.string.drawer_item_mod),
                      new DividerDrawerItem(),
                      new SecondaryDrawerItem().withName(R.string.drawer_item_settings)
                 )
                 .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id, IDrawerItem drawerItem) {
-                     // do something with the clicked item :D
+                    if (drawerItem instanceof Nameable) {
+                        toolbar.setTitle(((Nameable) drawerItem).getNameRes());
+                        switchView(((Nameable) drawerItem).getNameRes());
+                    }
                     }
                 })
                 .build();
-
-
-        findViewById(R.id.button2).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openPostActivity();
-            }
-        });
-        findViewById(R.id.button3).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openModActivity();
-            }
-        });
     }
 
-    private void openPostActivity () {
-        Intent intent = new Intent(this, PostActivity.class);
-        startActivity(intent);
-    }
-
-    private void openModActivity () {
-        Intent intent = new Intent(this, ModerateActivity.class);
-        startActivity(intent);
+    private void switchView (int view) {
+        switch (view) {
+            case R.string.drawer_item_home:
+                viewFlipper.setDisplayedChild(0);
+                break;
+            case R.string.drawer_item_post:
+                viewFlipper.setDisplayedChild(1);
+                break;
+            case R.string.drawer_item_mod:
+                viewFlipper.setDisplayedChild(2);
+                break;
+            case R.string.drawer_item_settings:
+                Intent intent = new Intent(this, SettingsActivity.class);
+                startActivity(intent);
+        }
     }
 
     @Override

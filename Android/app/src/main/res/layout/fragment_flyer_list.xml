@@ -1,37 +1,14 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context="com.dudeofawesome.flyerboard.FlyerListFragment">
 
-    <RelativeLayout
-        android:id="@+id/activity_main_toolbar_container"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary">
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/activity_main_toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            android:elevation="4dp"/>
-    </RelativeLayout>
+    <!--<ListView android:id="@android:id/list" android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent" />-->
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Post"
-        android:id="@+id/button2"
-        android:layout_alignParentTop="true"
-        android:layout_toLeftOf="@+id/button3"
-        android:layout_toStartOf="@+id/button3" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Moderate"
-        android:id="@+id/button3"
-        android:layout_below="@+id/activity_main_toolbar_container"
-        android:layout_centerHorizontal="true" />
+    <!--<TextView android:id="@android:id/empty" android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent" android:gravity="center" />-->
 
     <ScrollView
         android:layout_width="fill_parent"
@@ -50,7 +27,6 @@
             android:useDefaultMargins="true"
             android:id="@+id/asdfasdf"
             android:textAlignment="center"
-            style="@style/AppTheme"
             android:focusable="true">
 
 
@@ -125,4 +101,5 @@
         </GridLayout>
     </ScrollView>
 
-</RelativeLayout>
+
+</FrameLayout>

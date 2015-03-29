@@ -18,7 +18,7 @@ public class PostActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_post);
+        setContentView(R.layout.fragment_post);
 
         findViewById(R.id.button4).setOnClickListener(new View.OnClickListener() {
             @Override
