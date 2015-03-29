@@ -1,11 +1,16 @@
 package com.dudeofawesome.flyerboard;
 
+import android.os.Bundle;
+import android.os.Environment;
 import android.support.v4.app.NavUtils;
 import android.support.v7.app.ActionBarActivity;
-import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
+
+import java.io.File;
 
 
 public class PostActivity extends ActionBarActivity {
@@ -21,6 +26,7 @@ public class PostActivity extends ActionBarActivity {
                 backToMain();
             }
         });
+
     }
 
     private void backToMain () {
@@ -47,5 +53,41 @@ public class PostActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void uploadFlyer(View button) {
+        // Do click handling here for the Upload Flyer Button
+
+        /* Warning: Right now, the user must input the exact
+         * path + flyerName + extension to retrieve the file.
+         */
+        final EditText flyerNameField = (EditText) findViewById(R.id.EditTextFlyerName);
+        String flyerName = flyerNameField.getText().toString();
+
+        final EditText userNameField = (EditText) findViewById(R.id.EditTextUserName);
+        String userName = userNameField.getText().toString();
+
+        final EditText emailField = (EditText) findViewById(R.id.EditTextEmail);
+        String email = emailField.getText().toString();
+
+        final EditText bodyField = (EditText) findViewById(R.id.EditTextUploadFlyerBody);
+        String flyerDetails = bodyField.getText().toString();
+
+        // Retrieve flyer file from local memory
+        String path = Environment.getExternalStorageDirectory().toString() + flyerName;
+        Log.d("File", "Path: " + path);
+        File file = new File(path);
+
+        // Send flyer + flyer info to BACKEND DATABASE
+        addFlyerToDatabase(file, flyerName, userName, email, flyerDetails);
+    }
+
+    public void addFlyerToDatabase(File file,
+                                   String flyerName,
+                                   String userName,
+                                   String email,
+                                   String flyerDetails) {
+
+        // Place into backend database? And later display in feed?
     }
 }

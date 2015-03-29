@@ -6,15 +6,6 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="com.dudeofawesome.flyerboard.PostActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Mod Queue"
-        android:id="@+id/textView2"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
-
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -23,5 +14,57 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:orientation="vertical"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/button4">
+
+        <TextView
+            android:id="@+id/TextViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/uploadFlyer_pageTitle"
+            android:textSize="10pt"></TextView>
+
+        <EditText
+            android:id="@+id/EditTextFlyerName"
+            android:layout_height="wrap_content"
+            android:hint="@string/uploadFlyer_name"
+            android:inputType="textPersonName"
+            android:layout_width="fill_parent"></EditText>
+
+        <EditText
+            android:id="@+id/EditTextUserName"
+            android:layout_height="wrap_content"
+            android:hint="@string/uploadFlyer_user"
+            android:inputType="textPersonName"
+            android:layout_width="fill_parent"></EditText>
+
+        <EditText
+            android:id="@+id/EditTextEmail"
+            android:layout_height="wrap_content"
+            android:hint="@string/uploadFlyer_email"
+            android:inputType="textEmailAddress"
+            android:layout_width="fill_parent"></EditText>
+
+        <EditText
+            android:id="@+id/EditTextUploadFlyerBody"
+            android:layout_height="wrap_content"
+            android:hint="@string/uploadFlyer_body"
+            android:inputType="textMultiLine"
+            android:lines="5"
+            android:layout_width="fill_parent"></EditText>
+
+        <Button
+            android:id="@+id/ButtonSendFeedback"
+            android:layout_height="wrap_content"
+            android:text="@string/uploadFlyer_button"
+            android:onClick="uploadFlyer"
+            android:layout_width="fill_parent"></Button>
+
+
+    </LinearLayout>
 
 </RelativeLayout>

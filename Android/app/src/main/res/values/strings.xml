@@ -8,4 +8,17 @@
     <string name="title_activity_moderate">ModerateActivity</string>
     <string name="drawer_item_home">Drawer Home</string>
     <string name="drawer_item_settings">Drawer Settings</string>
+
+    <string
+        name="uploadFlyer_pageTitle">Upload a Flyer</string>
+    <string
+        name="uploadFlyer_name">Flyer File</string>
+    <string
+        name="uploadFlyer_user">Your Name</string>
+    <string
+        name="uploadFlyer_email">Your Email</string>
+    <string
+        name="uploadFlyer_body">Flyer details or tags...</string>
+    <string
+        name="uploadFlyer_button">Post</string>
 </resources>
