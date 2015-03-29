@@ -34,7 +34,7 @@
                 android:layout_width="153dp"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Large Text7"
+                android:text="Flyer #1"
                 android:id="@+id/textView7"
                 android:height="200dp"
                 android:layout_margin="10dp"
@@ -45,55 +45,61 @@
                 android:layout_width="153dp"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Large Text6"
+                android:text="Flyer #2"
                 android:id="@+id/textView6"
                 android:height="200dp"
                 android:layout_margin="10dp"
+                android:background="@mipmap/ic_launcher"
                 android:textAlignment="center"/>
             <TextView
                 android:layout_width="153dp"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Large Text5"
+                android:text="Flyer #3"
                 android:id="@+id/textView5"
                 android:height="200dp"
                 android:layout_margin="10dp"
+                android:background="@mipmap/ic_launcher"
                 android:textAlignment="center"/>
             <TextView
                 android:layout_width="153dp"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Large Text4"
+                android:text="Flyer #4"
                 android:id="@+id/textView4"
                 android:height="200dp"
                 android:layout_margin="10dp"
+                android:background="@mipmap/ic_launcher"
                 android:textAlignment="center"/>
             <TextView
                 android:layout_width="153dp"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Large Text3"
+                android:text="Flyer #5"
                 android:id="@+id/textView3"
                 android:height="200dp"
                 android:layout_margin="10dp"
+                android:background="@mipmap/ic_launcher"
                 android:textAlignment="center"/>
             <TextView
                 android:layout_width="153dp"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Large Text2"
+                android:text="Flyer #6"
                 android:id="@+id/textView2"
                 android:height="200dp"
                 android:layout_margin="10dp"
+                android:background="@mipmap/ic_launcher"
                 android:textAlignment="center"/>
             <TextView
                 android:layout_width="153dp"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Large Text1"
+                android:text="Flyer #7"
                 android:id="@+id/textView1"
                 android:height="200dp"
                 android:layout_margin="10dp"
+                android:background="@mipmap/ic_launcher"
                 android:textAlignment="center"/>
 
 
