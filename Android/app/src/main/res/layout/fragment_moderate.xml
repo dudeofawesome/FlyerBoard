@@ -63,8 +63,7 @@
             android:id="@+id/scrollView"
             android:layout_alignParentBottom="true"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/button2">
+            android:layout_alignParentStart="true" >
 
 
             <GridLayout
@@ -156,3 +155,4 @@
 
 
     <!--</FrameLayout>-->
+</RelativeLayout>
