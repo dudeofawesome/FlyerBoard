@@ -1,9 +1,11 @@
 package com.dudeofawesome.flyerboard;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 
 public class FlyerActivity extends ActionBarActivity {
@@ -12,6 +14,12 @@ public class FlyerActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_flyer);
+
+        Intent intent = getIntent();
+        ((TextView) findViewById(R.id.txtTitle)).setText("");
+        ((TextView) findViewById(R.id.txtEventName)).setText(intent.getStringExtra("eventName"));
+        ((TextView) findViewById(R.id.txtGroupName)).setText(intent.getStringExtra("groupName"));
+        ((TextView) findViewById(R.id.txtEventDate)).setText(intent.getStringExtra("date"));
     }
 
 

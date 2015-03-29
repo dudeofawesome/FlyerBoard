@@ -75,6 +75,10 @@ public class FlyerFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), FlyerActivity.class);
+                intent.putExtra("title", "Adobe User Group");
+                intent.putExtra("eventName", "Adobe User Group");
+                intent.putExtra("groupName", "Adobe");
+                intent.putExtra("date", "10.15.2010");
                 startActivity(intent);
             }
         });
