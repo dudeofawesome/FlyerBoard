@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.dudeofawesome.flyerboard" >
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,6 +12,11 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -17,16 +24,14 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".LoginActivity"
-            android:label="@string/title_activity_login" >
-        </activity>
-        <activity
             android:name=".PostActivity"
-            android:label="@string/title_activity_post" >
+            android:label="@string/title_activity_post"
+            android:parentActivityName=".MainActivity" >
         </activity>
         <activity
             android:name=".ModerateActivity"
-            android:label="@string/title_activity_moderate" >
+            android:label="@string/title_activity_moderate"
+            android:parentActivityName=".MainActivity" >
         </activity>
     </application>
 
