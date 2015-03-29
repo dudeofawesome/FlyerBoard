@@ -1,6 +1,7 @@
 package com.dudeofawesome.flyerboard;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -23,7 +24,7 @@ import com.mikepenz.materialdrawer.model.interfaces.IProfile;
 import com.mikepenz.materialdrawer.model.interfaces.Nameable;
 
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends ActionBarActivity implements FlyerFragment.OnFragmentInteractionListener {
     public static Toolbar toolbar;
 
     private ViewFlipper viewFlipper;
@@ -116,5 +117,11 @@ public class MainActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onFragmentInteraction(Uri uri) {
+        Intent intent = new Intent(this, FlyerActivity.class);
+        startActivity(intent);
     }
 }

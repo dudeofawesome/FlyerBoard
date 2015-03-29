@@ -1,105 +1,88 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.dudeofawesome.flyerboard.FlyerListFragment">
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.dudeofawesome.flyerboard.FlyerListFragment"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/scrollView" >
 
-    <!--<ListView android:id="@android:id/list" android:layout_width="match_parent"-->
-        <!--android:layout_height="match_parent" />-->
 
-    <!--<TextView android:id="@android:id/empty" android:layout_width="match_parent"-->
-        <!--android:layout_height="match_parent" android:gravity="center" />-->
-
-    <ScrollView
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:id="@+id/scrollView"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/button2">
+        android:layout_height="wrap_content">
 
+        <fragment
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:name="com.dudeofawesome.flyerboard.FlyerFragment"
+            android:id="@+id/fragment0"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
+            tools:layout="@layout/fragment_flyer" />
 
-        <GridLayout
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:columnCount="2"
-            android:useDefaultMargins="true"
-            android:id="@+id/asdfasdf"
-            android:textAlignment="center"
-            android:focusable="true">
+        <fragment
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:name="com.dudeofawesome.flyerboard.FlyerFragment"
+            android:id="@+id/fragment1"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
+            tools:layout="@layout/fragment_flyer" />
 
+        <fragment
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:name="com.dudeofawesome.flyerboard.FlyerFragment"
+            android:id="@+id/fragment2"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
+            tools:layout="@layout/fragment_flyer" />
 
-            <TextView
-                android:layout_width="153dp"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Large Text7"
-                android:id="@+id/textView7"
-                android:height="200dp"
-                android:layout_margin="10dp"
-                android:textAlignment="center"
-                android:background="@mipmap/ic_launcher"
-                android:scaleType="fitXY"/>
-            <TextView
-                android:layout_width="153dp"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Large Text6"
-                android:id="@+id/textView6"
-                android:height="200dp"
-                android:layout_margin="10dp"
-                android:textAlignment="center"/>
-            <TextView
-                android:layout_width="153dp"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Large Text5"
-                android:id="@+id/textView5"
-                android:height="200dp"
-                android:layout_margin="10dp"
-                android:textAlignment="center"/>
-            <TextView
-                android:layout_width="153dp"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Large Text4"
-                android:id="@+id/textView4"
-                android:height="200dp"
-                android:layout_margin="10dp"
-                android:textAlignment="center"/>
-            <TextView
-                android:layout_width="153dp"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Large Text3"
-                android:id="@+id/textView3"
-                android:height="200dp"
-                android:layout_margin="10dp"
-                android:textAlignment="center"/>
-            <TextView
-                android:layout_width="153dp"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Large Text2"
-                android:id="@+id/textView2"
-                android:height="200dp"
-                android:layout_margin="10dp"
-                android:textAlignment="center"/>
-            <TextView
-                android:layout_width="153dp"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Large Text1"
-                android:id="@+id/textView1"
-                android:height="200dp"
-                android:layout_margin="10dp"
-                android:textAlignment="center"/>
+        <fragment
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:name="com.dudeofawesome.flyerboard.FlyerFragment"
+            android:id="@+id/fragment3"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
+            tools:layout="@layout/fragment_flyer" />
 
+        <fragment
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:name="com.dudeofawesome.flyerboard.FlyerFragment"
+            android:id="@+id/fragment4"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
+            tools:layout="@layout/fragment_flyer" />
 
+        <fragment
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:name="com.dudeofawesome.flyerboard.FlyerFragment"
+            android:id="@+id/fragment5"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
+            tools:layout="@layout/fragment_flyer" />
 
-        </GridLayout>
-    </ScrollView>
+        <fragment
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:name="com.dudeofawesome.flyerboard.FlyerFragment"
+            android:id="@+id/fragment6"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
+            tools:layout="@layout/fragment_flyer" />
 
+        <fragment
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:name="com.dudeofawesome.flyerboard.FlyerFragment"
+            android:id="@+id/fragment7"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
+            tools:layout="@layout/fragment_flyer" />
 
-</FrameLayout>
+    </LinearLayout>
+</ScrollView>
