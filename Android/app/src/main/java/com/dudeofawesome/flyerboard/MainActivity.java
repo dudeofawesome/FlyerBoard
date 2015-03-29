@@ -37,12 +37,12 @@ public class MainActivity extends ActionBarActivity {
                 .withActivity(this)
                 .withHeaderBackground(R.drawable.header)
                 .addProfiles(
-                        new ProfileDrawerItem().withName("Bob Robertson").withEmail("brobertson@psu.edu").withIcon(getResources().getDrawable(R.drawable.profile))
+                    new ProfileDrawerItem().withName("Bob Robertson").withEmail("brobertson@psu.edu").withIcon(getResources().getDrawable(R.drawable.profile))
                 )
                 .withOnAccountHeaderListener(new AccountHeader.OnAccountHeaderListener() {
                     @Override
                     public boolean onProfileChanged(View view, IProfile profile, boolean currentProfile) {
-                        return false;
+                    return false;
                     }
                 })
                 .build();
@@ -53,14 +53,14 @@ public class MainActivity extends ActionBarActivity {
                 .withToolbar(toolbar)
                 .withAccountHeader(headerResult)
                 .addDrawerItems(
-                        new PrimaryDrawerItem().withName(R.string.drawer_item_home),
-                        new DividerDrawerItem(),
-                        new SecondaryDrawerItem().withName(R.string.drawer_item_settings)
+                     new PrimaryDrawerItem().withName(R.string.drawer_item_home),
+                     new DividerDrawerItem(),
+                     new SecondaryDrawerItem().withName(R.string.drawer_item_settings)
                 )
                 .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id, IDrawerItem drawerItem) {
-                        // do something with the clicked item :D
+                     // do something with the clicked item :D
                     }
                 })
                 .build();
