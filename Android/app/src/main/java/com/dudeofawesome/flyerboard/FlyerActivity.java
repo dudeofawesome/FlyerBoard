@@ -16,7 +16,6 @@ public class FlyerActivity extends ActionBarActivity {
         setContentView(R.layout.activity_flyer);
 
         Intent intent = getIntent();
-        ((TextView) findViewById(R.id.txtTitle)).setText("");
         ((TextView) findViewById(R.id.txtEventName)).setText(intent.getStringExtra("eventName"));
         ((TextView) findViewById(R.id.txtGroupName)).setText(intent.getStringExtra("groupName"));
         ((TextView) findViewById(R.id.txtEventDate)).setText(intent.getStringExtra("date"));

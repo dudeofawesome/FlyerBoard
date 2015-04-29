@@ -77,6 +77,8 @@ public class MainActivity extends ActionBarActivity implements FlyerFragment.OnF
                     }
                 })
                 .build();
+
+        refreshFlyers();
     }
 
     private void switchView (int view) {
@@ -94,6 +96,10 @@ public class MainActivity extends ActionBarActivity implements FlyerFragment.OnF
                 Intent intent = new Intent(this, SettingsActivity.class);
                 startActivity(intent);
         }
+    }
+
+    private void refreshFlyers () {
+        System.out.println(InterfaceServer.getFlyers("Pennsylvania State University"));
     }
 
     @Override

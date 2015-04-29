@@ -4,6 +4,19 @@
     tools:context="com.dudeofawesome.flyerboard.FlyerActivity">
 
     <RelativeLayout
+        android:id="@+id/activity_flyer_toolbar_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/activity_flyer_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:elevation="4dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:orientation="vertical"
